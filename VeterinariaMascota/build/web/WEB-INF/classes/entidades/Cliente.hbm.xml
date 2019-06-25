@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/06/2019 06:32:29 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="mascota" name="entidades.Cliente" optimistic-lock="version" table="cliente">
+    <id name="idCliente" type="int">
+      <column name="idCliente"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="nombres" type="string">
+      <column length="50" name="Nombre" not-null="true"/>
+    </property>
+    <property name="apellidos" type="string">
+      <column length="100" name="Apellido" not-null="true"/>
+    </property>
+    <property name="fechadeNacimiento" type="date">
+      <column length="10" name="Fecha_naci" not-null="true"/>
+    </property>
+    <property name="direccion" type="string">
+      <column length="150" name="Direccion" not-null="true"/>
+    </property>
+    <property name="numeroTelefono" type="string">
+      <column length="9" name="numeroTelefono" not-null="true"/>
+    </property>
+    <property name="e_mail" type="string">
+      <column length="100" name="e_mail" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>
